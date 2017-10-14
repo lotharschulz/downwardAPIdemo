@@ -1,0 +1,31 @@
+# https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/#the-downward-api
+apiVersion: v1
+kind: Pod
+metadata:
+  name: labels
+  labels:
+    mode: demo
+    cluster: minikube
+    app: downward-api-demo
+spec:
+  containers:
+    - name: downward-api-container
+      image: gcr.io/google_containers/busybox
+      command: ["sh", "-c"]
+      args:
+      - while true; do
+          if [[ -e /etc/labels ]]; then
+            echo -en '\n\n'; cat /etc/labels; fi;
+          sleep 2;
+        done;
+      volumeMounts:
+        - name: podinfo
+          mountPath: /etc
+          readOnly: false
+  volumes:
+    - name: podinfo
+      downwardAPI:
+        items:
+          - path: "labels"
+            fieldRef:
+              fieldPath: metadata.labels
