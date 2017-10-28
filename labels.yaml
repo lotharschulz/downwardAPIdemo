@@ -1,5 +1,6 @@
 # https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/#the-downward-api
-# sampe POD resources derived from https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/#store-pod-fields at 2017-10-14
+# sample POD resources derived from https://kubernetes.io/docs/tasks/inject-data-application/downward-api-volume-expose-pod-information/#store-pod-fields at 2017-10-14
+# https://www.lotharschulz.info/2017/10/15/kubernetes-downward-api-in-action/
 apiVersion: v1
 kind: Pod
 metadata:
