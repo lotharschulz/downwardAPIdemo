@@ -1,1 +1,1 @@
-sample kubernetes manifest used in [kubernetes-downward-api-in-action blog post](https://www.lotharschulz.info/2017/10/15/kubernetes-downward-api-in-action)
+[labels.yaml](https://github.com/lotharschulz/downwardAPIdemo/blob/master/labels.yaml) is a sample kubernetes manifest used in [kubernetes-downward-api-in-action blog post](https://www.lotharschulz.info/2017/10/15/kubernetes-downward-api-in-action)
